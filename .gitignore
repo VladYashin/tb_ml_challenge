@@ -1,3 +1,5 @@
+# Due to the models sizes it is impossible to upload them to the GitHub. Please run Jupyter Notebook locally
+
 .ipynb_checkpoints
 ./models/knn_classifier
 ./models/rfc_classifier

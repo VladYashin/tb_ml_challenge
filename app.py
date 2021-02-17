@@ -34,5 +34,5 @@ def start_app():
         print('Try again!')
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     start_app()
