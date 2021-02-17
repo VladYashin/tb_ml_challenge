@@ -1,0 +1,3 @@
+.ipynb_checkpoints
+./models/knn_classifier
+./models/rfc_classifier
