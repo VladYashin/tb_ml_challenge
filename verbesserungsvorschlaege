@@ -1,0 +1,24 @@
+Unfortunately I'm not able to run several operations on my machine, but nevertheless here are some suggestions.
+
+
+# Model optimization
+
+0. Word Lemmatization with spacy
+1. For the KNN Model between 1 and 6 neighbors the best performance of the model(≈83%) lays by 3! So, it's appropriate to choose 3.
+2. Try to increase the number of neighbors for the GridSearch to find optimal amount of neighbors (like 20-30 etc.)
+3. Also it would be a good practice for bigger datasets to train them with more folds (like 10-20 etc.)
+4. Also by adding extra features such as gender, age, status etc. it would be a good idea to normalize all the features --> mean=0, standard deviation=1 --> z = (x - u) / s --> StandardScaler in sklearn
+5. It would be also a good idea to try other algorithms (f.e. Naive Bayes or LSVM).
+6. For better performance/accuracy remove words with very low frequency from 'text'
+7. Probably it's a good idea to create new feature based on the text (single Xi) length. Assumption: none labels have in general more words, than tech and soft
+8. For all the models it would be a good practice to fit RandomSearch/GridSearch with all possible parameters to find out the best ones.
+9. Play around with 'min_df' and 'max_df' parameters in TfidfVectorizer (eventually create tfidf model for every algorithm)
+
+# App optimization
+
+To my mind it is a simple app created just for testing purposes. For more conveniences a Flask app could have been done (no time left for that...). The biggest advantage of this solution is that the user of the app/model shouldn't understand that much about Pandas, Sklearn and Numpy.
+Next step would be to wrap the model into web application, where user should upload CSV files to get the right prediction. Depending on business needs we can track model changes across multiple versions/commits.
+Also it is pretty important to be able to replace some already existing features without affecting the end customers. It is also important to keep an eye on all the changes in terms of feature engineering, parameters tuning, A/B Testing etc.
+
+P.S. Never did it before, but 99.99% sure I would have performed these steps if there were real needs to.
+

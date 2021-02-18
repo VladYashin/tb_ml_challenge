@@ -18,7 +18,7 @@ class Model(object):
     Possible options: knn_classifier, knn_cv_classifier, rfc_classifier
     By default --> rfc_classifier """
 
-    def __init__(self, mlmodel='rfc_classifier'):
+    def __init__(self, mlmodel='mnb_classifier'):
 
         # Import model from pickle file
         model_path = os.path.dirname(os.path.realpath(__file__))
@@ -39,9 +39,7 @@ class Model(object):
             print('Still unknown data type for me!')
 
         y_predicted = self.mlmodel.predict(query_c)
-        output_df = pd.DataFrame(data={'text': query, 'label': y_predicted}).replace(0, 'none').replace(1,
-                                                                                                        'soft').replace(
-            2, 'tech')
+        output_df = pd.DataFrame(data={'text': query, 'label': y_predicted}).replace(0, 'none').replace(1, 'soft').replace(2, 'tech')
 
         return output_df
 
@@ -63,17 +61,3 @@ class Model(object):
 
         print('Model fitted')
         return X_data
-
-    def get_metrics(self):
-
-        """ Function to get metrics for specific model """
-
-        metrics_eval()
-
-
-# input_string = 'Ich habe gerne fuer euch zur Vefuegung die Kenntnisse der Kraftomnibussen und Python, Java, Pandas, Mikroskopie'
-#
-# model = Model()
-# # ddata = model.fit(test_df, 'label')
-# output = model.predict(input_string)
-# print(output)
