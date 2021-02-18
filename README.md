@@ -10,3 +10,6 @@ First things first. I wasn't able to upload all my models as pickle files to Git
 1. Run Jupyter Notebook to save all the models locally (model_dev)
 2. Run app.py to test the models (Default model is Naive Bayes)
 3. Read 'verbesserungsvorschlaege.txt'
+
+
+![image-2.png](attachment:image-2.png)
