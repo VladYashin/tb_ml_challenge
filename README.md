@@ -3,7 +3,7 @@
 
 • Jupyter Notebook --> Model Development, EDA, Performance, Feature Engineering etc.
 
-• Application --> Simple simulation of production environment.
+• Application --> Simple simulation of production environment using terminal.
 
 First things first. I wasn't able to upload all my models as pickle files to GitHub due to upload limitations, so there are several steps how to start with this repo:
 
